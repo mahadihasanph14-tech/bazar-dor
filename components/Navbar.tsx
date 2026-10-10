@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getCategories, getProducts } from "@/lib/api";
 import AuthNav from "./AuthNav";
 import CategoryNav from "./CategoryNav";
+import Image from "next/image";
 import { money, percent } from "@/lib/utils";
 
 export default async function Navbar() {
@@ -19,9 +20,15 @@ export default async function Navbar() {
     <header className="bg-white">
       <div className="container-main flex min-h-[72px] items-center justify-between gap-4 py-3">
         <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-500 text-xl">
-            🛒
-          </span>
+         <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-500">
+  <Image
+    src="/logo.png"
+    alt="বাজার দর Logo"
+    width={40}
+    height={40}
+    className="h-10 w-10 object-contain"
+  />
+</span>
           <span>
             <span className="block text-[18px] font-extrabold">বাজার দর</span>
             <span className="block text-[10px] text-slate-500">{today}</span>
