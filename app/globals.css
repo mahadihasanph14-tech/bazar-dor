@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --green: #009b4d;
+  --bg: #f4f8f4;
+  --ink: #1d2b24;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, "Noto Sans Bengali", sans-serif;
+}
+.container-main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 20px;
+}
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 9px;
+  padding: 9px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.btn-primary {
+  background: #009b4d;
+  color: white;
+}
+.btn-primary:hover {
+  background: #007d3d;
+}
+.btn-outline {
+  border: 1px solid #cfe0d4;
+  background: white;
+  color: #254032;
+}
+.btn-outline:hover {
+  border-color: #009b4d;
+  color: #007d3d;
+}
+.card {
+  background: white;
+  border: 1px solid #e1e9e2;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(22, 51, 37, 0.05);
+}
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid #eef2ee;
+  border-bottom: 1px solid #e2e9e3;
+  background: #fff;
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+.ticker-item {
+  padding: 9px 24px;
+  border-right: 1px solid #eef2ee;
+  font-size: 12px;
+  white-space: nowrap;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 640px) {
+  .container-main {
+    padding: 0 14px;
+  }
+  .ticker-item {
+    padding: 8px 14px;
+  }
+  .btn-primary,
+  .btn-outline {
+    padding: 8px 11px;
+    font-size: 13px;
+  }
+}
