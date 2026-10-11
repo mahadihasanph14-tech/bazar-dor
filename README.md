@@ -20,6 +20,8 @@ Bazar Dor makes it easier to explore everyday grocery and household product pric
 * 🔒 **Protected Routes:** Restrict access to pages that require authentication.
 * 🔔 **Toast Notifications:** Display feedback for relevant user actions.
 * ⏳ **Loading States:** Provide loading feedback while content is being fetched.
+* 🚀 **Deployment:** Hosted on Netlify for online access.
+
 
 ## 🛠️ Technologies Used
 
