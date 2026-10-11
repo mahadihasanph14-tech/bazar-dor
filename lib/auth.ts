@@ -54,7 +54,6 @@ export const auth = betterAuth({
   trustedOrigins: [
   "http://localhost:3000",
   "https://heartfelt-dolphin-565873.netlify.app",
-  "https://*.netlify.app",
 ],
 });
 
